@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Money Invest - Investment Plans & Business Idea Generator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            text-align: center;
+            color: #fff;
+        }
+        h1 {
+            color: #fff;
+            margin-top: 70px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 45px;
+            font-weight: 700;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            border: 2px solid #3498db;
+            width: 90%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 18px;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+        }
+        th {
+            background-color: #3498db;
+        }
+        td {
+            background-color: #222;
+        }
+        tr:nth-child(even) td {
+            background-color: #444;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #fff;
+            margin: 50px auto;
+            width: 80%;
+        }
+        .cta-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .cta-button {
+            background: #27ae60;
+            color: #fff;
+            padding: 20px 40px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 20px 0;
+            text-decoration: none;
+            transition: all 0.4s ease;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, #3498db, #27ae60);
+            color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .info {
+            font-size: 20px;
+            line-height: 1.5;
+            margin: 0 auto;
+            width: 80%;
+        }
+        .hashtag {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .business-ideas {
+            font-size: 18px;
+            color: #27ae60;
+            font-weight: bold;
+            margin: 20px auto;
+            width: 80%;
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: transparent;
+        }
+
+        .generate-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .generate-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+    <script>
+        function generateIdea() {
+            var ideas = [
+                "Online tutoring platform for specialized skills.",
+                "Eco-friendly, reusable product store.",
+                "AI-powered personalized health and fitness app.",
+                "Virtual reality travel experiences for homebound adventurers.",
+                "Subscription box service for unique snacks from around the world.",
+                "Mobile app for organizing and attending local events.",
+                "Personalized meal planning and delivery service.",
+                "Smart home automation installation and consulting.",
+                "Outdoor adventure and camping gear rental service.",
+                "Digital marketing agency specializing in social media.",
+                "Customized art workshops for beginners",
+                "new idea",
+                "Local sustainable farmers' market.",
+                "Virtual language exchange platform.",
+                "Professional resume and LinkedIn profile writing service.",
+                "Bike-sharing and electric scooter rental service.",
+                "Online platform for handmade crafts and artisans.",
+                "Event photography and videography business.",
+                "Personalized travel itinerary planning service.",
+                "Healthy meal prep and delivery for busy professionals.",
+                "Virtual personal shopper and fashion consultant."
+            ];
+
+            var randomIndex = Math.floor(Math.random() * ideas.length);
+            var randomIdea = ideas[randomIndex];
+
+            document.getElementById("idea-text").textContent = randomIdea;
+        }
+    </script>
+</head>
+<body>
+<h1>Money Invest - Investment Plans</h1>
+<table>
+    <tr>
+        <th>Plan</th>
+        <th>Invest</th>
+        <th>Profit</th>
+        <th>Duration</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>₹1,000</td>
+        <td>₹1,200</td>
+        <td>7 Days</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>₹2,000</td>
+        <td>₹2,400</td>
+        <td>7 Days</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>₹3,000</td>
+        <td>₹3,400</td>
+        <td>14 Days</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>₹4,000</td>
+        <td>₹4,500</td>
+        <td>21 Days</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>₹5,000</td>
+        <td>₹5,500</td>
+        <td>21 Days</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>₹10,000</td>
+        <td>₹11,000</td>
+        <td>28 Days</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>₹20,000</td>
+        <td>₹25,000</td>
+        <td>35 Days</td>
+    </tr>
+</table>
+
+<hr>
+
+<h1 class="business-ideas">Business Idea Generator</h1>
+
+<div id="business-ideas Generator">
+    <p id="idea-text">Click the button to generate a business idea.</p>
+    <button class="generate-button" onclick="generateIdea()">Generate Idea</button>
+</div>
+
+<hr>
+
+<div class="cta-container">
+    <a class="cta-button" href="https://surveyheart.com/form/650dcdcaa58d9d52e2cb8542">Invest Now</a>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000; /* Black background */
+            text-align: center;
+            color: #fff; /* White text color */
+        }
+
+        h2, h3 {
+            color: #fff; /* White text color for headings */
+        }
+
+        .terms {
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .terms p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #fff; /* White text color for content paragraphs */
+        }
+    </style>
+</head>
+<body>
+    <h2><span style="color: #87CEEB;">*Terms and Conditions</span></h2>
+    <div class="terms">
+        <p>Welcome to Money Invest - Investment Plans & Business Idea Generator. These terms and conditions outline the rules and regulations for the use of our services.</p>
+
+        <h3>1. Acceptance of Terms</h3>
+        <p>By using our services, you accept and agree to be bound by these terms and conditions. If you do not agree to these terms, please do not use our services.</p>
+
+        <h3>2. Investment Plans</h3>
+        <p>Our investment plans are designed to provide opportunities for financial growth. However, all investments carry risks, and past performance is not indicative of future results.</p>
+
+        <h3>3. Business Idea Generator</h3>
+        <p>Our Business Idea Generator is a tool for generating business ideas. We do not guarantee the success of any business idea generated using this tool.</p>
+
+        <h3>4. Privacy Policy</h3>
+        <p>Your use of our services is also governed by our Privacy Policy, which can be found [insert link to Privacy Policy].</p>
+
+        <h3>5. Changes to Terms</h3>
+        <p>We reserve the right to modify these terms and conditions at any time. It is your responsibility to review them periodically for changes.</p>
+
+        <h3>6. Contact Us</h3>
+        <p>If you have any questions or concerns about these terms and conditions, please contact
+
